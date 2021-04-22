@@ -1,0 +1,213 @@
+<!-- 
+    Name:Judah Plett
+    Course: Web Development
+    Teacher:Mr.Hardman
+    School:PTEC
+    Date Last Modified: 2021-04-22
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" />
+    <style>
+        /* makeing image"headshot" circular instead of square */
+        .circular--square {
+            border-radius: 100%;
+        }
+
+        /* image width and height */
+        img {
+            width: 360px;
+            height: 360px;
+        }
+
+        #right-text {
+            display: inline;
+        }
+
+        /* entire flex container for all 3 seperate containers */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            align-items: top;
+            margin-top: 25px;
+        }
+
+        /* flex div containers */
+        .flex-container>div {
+            background-color: #1b706f;
+            margin: 20px;
+            padding: 30px;
+
+        }
+
+        /* picture flex adjustment */
+        #headshot {
+            /* height: 410px; */
+            flex-grow: 1;
+        }
+
+        /* introduction heading flex adjustment */
+        #intro {
+            flex-grow: 3;
+            /* opacity: 10%; */
+        }
+
+        /* circle button flex adjustment */
+        #circle-links {
+            position: relative;
+            flex-grow: 1;
+        }
+
+        /* circle button specifications */
+        svg {
+            display: block;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 25px;
+        }
+
+        /* positoning of the links inside the circles */
+        .link-in-circle {
+            position: absolute;
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            text-align: center;
+        }
+
+        .link-in-circle a {
+
+            position: relative;
+            top: 40%;
+            transform: perspective(1px) translateY(-40%);
+            font-size: 18px;
+
+        }
+
+        /* positioning of the circles */
+        #top-circle {
+            top: 30px;
+        }
+
+        #mid-circle {
+            top: 175px;
+        }
+
+        #bottom-circle {
+            top: 320px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <!--Title and professional discription-->
+        <h1 id="title">Judah<span style="color: orangered;">R</span>Plett</h1>
+
+        <h3 style="margin-left:75px; margin-top:0;" id="title">Student<span style="color: red;">&</span> Web Developer
+        </h3>
+
+    </header>
+
+    <nav>
+
+        <ul>
+
+            <!-- page links  -->
+            <li>
+                <a class="navLinks" href="index.html"> Home</a>
+            </li>
+
+            <li>
+                <a class="navLinks" href="Resume.html">Resume</a>
+            </li>
+
+            <li>
+                <a class="navLinks" href="My-Work.html">Portfolio</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <!-- flex-container holds the img, intro, and circular links -->
+        <div class="flex-container">
+
+            <div id="headshot">
+
+                <!--Profile Picture of myself-->
+                <img class="circular--square" src="D:\Web Dev\Images\20210311_131919.jpg" />
+
+            </div>
+
+
+            <div id="intro" style="margin-left: -75px;">
+
+                <!--Heading-->
+                <h2 id="right-text">Hello, <br>
+                    a bit about me:</h2>
+
+                <p>My name is Judah r Plett and I was born <br>in Winnipeg Manitoba and was
+                    raised in Antananarivo Madagascar. <br>My family moved back to Cannada in 2016.<br>
+                    After moving back to Canada I went to school at <br>River West Park for the remainder
+                    of middle school,<br> I then when to Shaftbury Hight for hightschool as well as being in PTEC<br>
+                    Where I am learning to maybe become a web Developer.</p>
+
+            </div>
+
+
+            <div id="circle-links">
+                <!--circular buttons to other pages-->
+
+                <svg>
+                    <circle cx="60" cy="60" r="60" fill="#52B4AF" />
+                </svg>
+
+                <div class="link-in-circle" id="top-circle">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <svg>
+                    <circle cx="60" cy="60" r="60" fill="#52b4af" />
+                </svg>
+
+                <div class="link-in-circle" id="mid-circle">
+                    <a href="Resume.html">Resume</a>
+                </div>
+
+                <svg>
+                    <circle cx="60" cy="60" r="60" fill="#52b4af" />
+                </svg>
+
+                <div class="link-in-circle" id="bottom-circle">
+                    <a href="My-Work.html">My Work</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <!--Footer holds my phone number and other contact info as well as my instagram-->
+    <div class="footer">
+
+        <p style="float: left; margin-left: 300px; margin-top: 30px;"> Contact: juplett@smail.pembinatrails.ca</p>
+        <p style="float: right; margin-right: 400px; margin-top: 30px;">School: Pembinatrails Early College</p>
+
+    </div>
+
+</body>
+
+</html>
