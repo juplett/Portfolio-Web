@@ -3,7 +3,7 @@
     Course: Web Development
     Teacher:Mr.Hardman
     School:PTEC
-    Date Last Modified: 2021-04-22
+    Date Last Modified: 2021-04-26
  -->
 
 <!DOCTYPE html>
@@ -54,7 +54,7 @@
         /* introduction heading flex adjustment */
         #intro {
             flex-grow: 3;
-            /* opacity: 10%; */
+            padding-top: 20px;
         }
 
         /* circle button flex adjustment */
@@ -81,7 +81,8 @@
         }
 
         .link-in-circle a {
-
+            color: darkblue;
+            text-decoration: underline;
             position: relative;
             top: 40%;
             transform: perspective(1px) translateY(-40%);
@@ -106,6 +107,69 @@
             top: 295px;
             font-style: bold;
             color: blue;
+        }
+
+        /* flipping of the profile picture */
+        /* code for flipping the img comes from W3schools @ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card*/
+
+        .flip-card {
+            background-color: transparent;
+
+            /* width and height of img */
+            width: 360px;
+            height: 360px;
+
+            /* controles how big the flip is compared to the page */
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+
+            /* alines text to the center of img */
+            text-align: center;
+
+            transition: transform 0.6s;
+
+            /* make's it so that everything in the flip-card-inner container stays 3D insyead of goig 2D */
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+
+            /* rotation of img and how much it turns  */
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            /* keep's the img in place so that it does not move downwards */
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .flip-card-front {
+            background-color: #1b706f;
+            color: white;
+        }
+
+        .flip-card-back {
+            background-color: #b4b4b4;
+            color: black;
+            transform: rotateY(180deg);
+            border-radius: 100%;
+
+            /* flex box to move items to corect position */
+            display: flex;
+
+            /* centers items in the same whay the direction is going ex: direction column it would center the items in a column and not in a row and vis versa */
+            justify-content: center;
+
+            /* gets the text to be presented as a column or any other in the flex box */
+            flex-direction: column;
         }
     </style>
 
@@ -150,9 +214,21 @@
 
             <div id="headshot">
 
-                <!--Profile Picture of myself-->
-                <img class="circular--square" alt="Profile Headshot Picture of Judah Plett"
-                    src="images\20210311_131919.jpg" />
+
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <!--Profile Picture of myself-->
+                            <img class="circular--square" alt="Profile Headshot Picture of Judah Plett"
+                                src="images\20210311_131919.jpg" />
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size: 30px;">Judah Plett</h3>
+                            <p style="font-size: 20px;">Student <br> Age 15</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -163,11 +239,10 @@
                 <h2 id="right-text">Hello, <br>
                     a bit about me:</h2>
 
-                <p>My name is Judah r Plett and I was born <br>in Winnipeg Manitoba and was
+                <p>My name is Judah Plett and I was born <br>in Winnipeg Manitoba and was
                     raised in Antananarivo Madagascar. <br>My family moved back to Cannada in 2016.<br>
                     After moving back to Canada I went to school at <br>River West Park for the remainder
-                    of middle school,<br> I then went to Shaftbury Hight for hightschool as well as PTEC or <br>
-                    Pembinatrails Early Colleg where I am learning to maybe become a web Developer.</p>
+                    of middle school,<br> I then went to Shaftbury Hight and PTEC for hightschool</p>
 
             </div>
 
